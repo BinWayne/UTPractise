@@ -8,6 +8,7 @@ import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.Test;
 
 @ContextConfiguration(classes = FooServiceImpl.class)
+//@SpringBootTest(classes = FooServiceImpl.class)
 public class FooServiceImplTest extends AbstractTestNGSpringContextTests {
 
 	@Autowired
