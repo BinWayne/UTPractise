@@ -1,17 +1,19 @@
 package com.example.utdemo;
 
 import static java.util.stream.Collectors.toList;
+import static org.testng.Assert.assertEquals;
 
 import java.util.Map;
-import static org.testng.Assert.assertEquals;
+
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.EnvironmentAware;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.core.env.Environment;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.Test;
-@ContextConfiguration(classes = PropertySourceConfig.class)
+
+@SpringBootTest(classes = PropertySourceConfig.class)
 @TestPropertySource(
 	    properties = { "foo=xyz", "bar=uvw", "PATH=aaa", "java.runtime.name=bbb" },
 	    locations = "classpath:property-source.properties"
