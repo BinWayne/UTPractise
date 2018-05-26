@@ -12,6 +12,8 @@ import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.Test;
 
+import com.utdemo.config.PropertySourceConfig;
+
 @ContextConfiguration(classes = PropertySourceConfig.class)
 //@SpringBootTest(classes = PropertySourceConfig.class)
 @TestPropertySource(
