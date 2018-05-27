@@ -3,11 +3,11 @@ package com.utdemo.service;
 import static org.testng.Assert.assertEquals;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.Test;
-@ContextConfiguration(classes = GenericService.class)
-//@SpringBootTest(classes = GenericService.class)
+//@ContextConfiguration(classes = GenericService.class)
+@SpringBootTest(classes = GenericService.class)
 public class ActiveProfileTest extends AbstractTestNGSpringContextTests {
 
 	@Autowired
